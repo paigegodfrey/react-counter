@@ -1,34 +1,29 @@
-import { useState } from "react";
 import "./ListItem.css";
 
-const ListItem = ({ food }) => {
-  const { item, value } = food;
-  const [count, setCount] = useState(value);
-
-  const increment = () => {
-    setCount(c => c < 25 ? c + 1 : 25);
-  }
-
-  const decrement = () => {
-    setCount(c => c > 0 ? c - 1 : 0);
-  }
+const ListItem = ({ item, handleIncrement, handleDecrement, handleDelete }) => {
+  const { name, quantity } = item;
 
   return (
     <div className="ListItem">
       <div className="list-item-container">
+        <i
+          className="fa fa-times text-danger"
+          id="delete-icon"
+          onClick={handleDelete}
+        />
         <div className="counter-controls">
           <div className="counter decrement">
-            <button onClick={decrement}>-</button>
+            <button onClick={handleDecrement}>-</button>
           </div>
           <div className="counter count">
-            {count}
+            {quantity}
           </div>
           <div className="counter increment">
-            <button onClick={increment}>+</button>
+            <button onClick={handleIncrement}>+</button>
           </div>
         </div>
-        <div className="item">
-          {item}
+        <div className="name">
+          {name}
         </div>
       </div>
     </div>

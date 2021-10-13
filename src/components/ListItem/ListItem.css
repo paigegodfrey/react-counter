@@ -1,14 +1,20 @@
 .ListItem {
-  margin: 15px;
+  margin: 5px 0;
 }
 
 .list-item-container {
   display: flex;
 }
 
+#delete-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
 .counter-controls {
   display: flex;
-  width: 90px;
+  width: 80px;
   justify-content: space-between;
 }
 
@@ -16,6 +22,6 @@
   display: inline-block;
 }
 
-.item {
-  margin-left: 15px;
+.name {
+  margin-left: 10px;
 }
