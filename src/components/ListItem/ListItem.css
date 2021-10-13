@@ -1,0 +1,21 @@
+.ListItem {
+  margin: 15px;
+}
+
+.list-item-container {
+  display: flex;
+}
+
+.counter-controls {
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+}
+
+.counter {
+  display: inline-block;
+}
+
+.item {
+  margin-left: 15px;
+}
