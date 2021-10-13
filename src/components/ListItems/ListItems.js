@@ -9,7 +9,7 @@ const ListItems = ({ items, setItems }) => {
       item.id === itemId ?
       {
         ...item,
-        quantity: item.quantity > 0 ? item.quantity - 1 : 0
+        quantity: item.quantity > 0 ? +item.quantity - 1 : 0
       }
       :
       item
@@ -22,7 +22,7 @@ const ListItems = ({ items, setItems }) => {
       item.id === itemId ?
       {
         ...item,
-        quantity: item.quantity <25 ? item.quantity + 1 : 25
+        quantity: item.quantity <25 ? +item.quantity + 1 : 25
       }
       :
       item
