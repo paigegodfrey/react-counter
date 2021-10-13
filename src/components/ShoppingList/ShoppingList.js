@@ -14,6 +14,7 @@ const ShoppingList = () => {
   return (
     <div className="ShoppingList">
       <h1>Shopping List</h1>
+      <p>(Max quantity per item: 25)</p>
       <ListItemForm addItem={addItem} />
       <ListItems items={items} setItems={setItems} />
     </div>

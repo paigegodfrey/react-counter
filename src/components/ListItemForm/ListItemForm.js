@@ -21,7 +21,7 @@ const ListItemForm = ({ addItem }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="ListItemForm" onSubmit={handleSubmit}>
       <label htmlFor="name">Item:</label>
       <input
         type="text"
