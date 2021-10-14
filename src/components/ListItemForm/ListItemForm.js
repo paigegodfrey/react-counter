@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ListItemForm.css";
 
 const ListItemForm = ({ addItem }) => {
-  const INITIAL_STATE = {name: "", quantity: 0};
+  const INITIAL_STATE = { name: "", quantity: 0 };
   const [formData, setFormData] = useState(INITIAL_STATE);
 
   const handleSubmit = evt => {
@@ -12,8 +12,7 @@ const ListItemForm = ({ addItem }) => {
   }
 
   const handleChange = evt => {
-    const {value, name} = evt.target;
-
+    const { value, name } = evt.target;
     setFormData(fData => ({
       ...fData,
       [name]: value
